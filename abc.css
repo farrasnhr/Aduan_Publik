@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #385599;
 }
 body{
     min-height: 100vh;
@@ -12,7 +13,7 @@ body{
     height: 100vh;
     position: fixed;
     /* margin-left: ; */
-    background-color: orange;
+    background-color: white;
     transition: 0.4s;
 }
 .nav-link{
@@ -23,3 +24,6 @@ body{
 .nav-link:hover{
     background-color: blue;
 }
+/* #prof {
+    border-radius: 50px;
+} */
