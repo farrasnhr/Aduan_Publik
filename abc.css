@@ -194,3 +194,7 @@ body{
     border-radius: 6px;
     /* margin-right: 95px; */
   }
+
+  footer {
+    margin-top: 50px;
+}
