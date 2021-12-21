@@ -7,7 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $data['judul']; ?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?= BASEURL; ?>css/navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="<?= CSS; ?>navbar.css">
+    <?php
+    if (isset($data['css'])) {
+        echo baseCSS, CSS, "{$data['css']}.css", endCSS;
+    }
+    ?>
+
 </head>
 
 <body>
@@ -25,7 +34,7 @@
             </li>
 
             <li class="nav-item">
-                <a href="<?= BASEURL; ?>/daftaraduan" class="nav-link">
+                <a href="<?= BASEURL; ?>daftaraduan" class="nav-link">
                     <svg width="18" height="25" viewBox="0 0 18 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.75 3.5H12C12 1.85938 10.6406 0.5 9 0.5C7.3125 0.5 6 1.85938 6 3.5H2.25C0.984375 3.5 0 4.53125 0 5.75V22.25C0 23.5156 0.984375 24.5 2.25 24.5H15.75C16.9688 24.5 18 23.5156 18 22.25V5.75C18 4.53125 16.9688 3.5 15.75 3.5ZM4.5 20.375C3.84375 20.375 3.375 19.9062 3.375 19.25C3.375 18.6406 3.84375 18.125 4.5 18.125C5.10938 18.125 5.625 18.6406 5.625 19.25C5.625 19.9062 5.10938 20.375 4.5 20.375ZM4.5 15.875C3.84375 15.875 3.375 15.4062 3.375 14.75C3.375 14.1406 3.84375 13.625 4.5 13.625C5.10938 13.625 5.625 14.1406 5.625 14.75C5.625 15.4062 5.10938 15.875 4.5 15.875ZM4.5 11.375C3.84375 11.375 3.375 10.9062 3.375 10.25C3.375 9.64062 3.84375 9.125 4.5 9.125C5.10938 9.125 5.625 9.64062 5.625 10.25C5.625 10.9062 5.10938 11.375 4.5 11.375ZM9 2.375C9.60938 2.375 10.125 2.89062 10.125 3.5C10.125 4.15625 9.60938 4.625 9 4.625C8.34375 4.625 7.875 4.15625 7.875 3.5C7.875 2.89062 8.34375 2.375 9 2.375ZM15 19.625C15 19.8594 14.8125 20 14.625 20H7.875C7.64062 20 7.5 19.8594 7.5 19.625V18.875C7.5 18.6875 7.64062 18.5 7.875 18.5H14.625C14.8125 18.5 15 18.6875 15 18.875V19.625ZM15 15.125C15 15.3594 14.8125 15.5 14.625 15.5H7.875C7.64062 15.5 7.5 15.3594 7.5 15.125V14.375C7.5 14.1875 7.64062 14 7.875 14H14.625C14.8125 14 15 14.1875 15 14.375V15.125ZM15 10.625C15 10.8594 14.8125 11 14.625 11H7.875C7.64062 11 7.5 10.8594 7.5 10.625V9.875C7.5 9.6875 7.64062 9.5 7.875 9.5H14.625C14.8125 9.5 15 9.6875 15 9.875V10.625Z" fill="#121C51" />
                     </svg>
@@ -43,7 +52,7 @@
             </li>
 
             <li class="nav-item">
-                <a href="<?= BASEURL; ?>/about" class="nav-link">
+                <a href="<?= BASEURL; ?>about" class="nav-link">
                     <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 0.875C5.57812 0.875 0.375 6.125 0.375 12.5C0.375 18.9219 5.57812 24.125 12 24.125C18.375 24.125 23.625 18.9219 23.625 12.5C23.625 6.125 18.375 0.875 12 0.875ZM12 6.03125C13.0781 6.03125 13.9688 6.92188 13.9688 8C13.9688 9.125 13.0781 9.96875 12 9.96875C10.875 9.96875 10.0312 9.125 10.0312 8C10.0312 6.92188 10.875 6.03125 12 6.03125ZM14.625 17.9375C14.625 18.2656 14.3438 18.5 14.0625 18.5H9.9375C9.60938 18.5 9.375 18.2656 9.375 17.9375V16.8125C9.375 16.5312 9.60938 16.25 9.9375 16.25H10.5V13.25H9.9375C9.60938 13.25 9.375 13.0156 9.375 12.6875V11.5625C9.375 11.2812 9.60938 11 9.9375 11H12.9375C13.2188 11 13.5 11.2812 13.5 11.5625V16.25H14.0625C14.3438 16.25 14.625 16.5312 14.625 16.8125V17.9375Z" fill="#121C51" />
                     </svg>
@@ -52,7 +61,7 @@
             </li>
 
             <li class="nav-item">
-                <a href="<?= BASEURL; ?>/profil" class="nav-link">
+                <a href="<?= BASEURL; ?>profil" class="nav-link">
                     <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="space-shuttle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-space-shuttle fa-w-20 fa-5x">
                         <g class="fa-group">
                             <path fill="currentColor" d="M32 416c0 35.35 21.49 64 48 64h16V352H32zm154.54-232h280.13L376 168C243 140.59 222.45 51.22 128 34.65V160h18.34a45.62 45.62 0 0 1 40.2 24zM32 96v64h64V32H80c-26.51 0-48 28.65-48 64zm114.34 256H128v125.35C222.45 460.78 243 371.41 376 344l90.67-16H186.54a45.62 45.62 0 0 1-40.2 24z" class="fa-secondary"></path>
