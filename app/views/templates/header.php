@@ -74,4 +74,4 @@
     </nav>
 
     <main>
-        <div class="container">
+        <div class="container h-100">
