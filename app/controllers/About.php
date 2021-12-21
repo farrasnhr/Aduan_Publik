@@ -1,10 +1,9 @@
 <?php
 class About extends Controller {
-    public function index()
-    {
-        $data['judul'] = "";
+    public function index() {
+        $data['judul'] = "Tentang";
         $this->view('templates/header', $data);
-        $this->view('aduan/index');
+        $this->view('about/index');
         $this->view('templates/footer');
     }
 }
