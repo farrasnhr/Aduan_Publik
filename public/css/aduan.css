@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #2e457a;
+}
+
+.navbar-brand img {
+    max-width: 4.375rem;
+}
+
+.fci-radio {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    box-shadow: 7px 7px 15px rgba(2, 28, 53, 0.08);
+    cursor: pointer;
+    outline: none;
+}
+
+.fci-radio:before {
+    content: "";
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    background-color: #f9fafd;
+    border: 1px solid #e2e6f3;
+    border-radius: 50%;
+    top: 35px;
+    right: 20px;
+}
+
+.fci-radio:after {
+    content: "";
+    position: absolute;
+    height: 13px;
+    width: 13px;
+    background-color: transparent;
+    border-radius: 50%;
+    top: 39.5px;
+    right: 24.5px;
+}
+
+label {
+    position: absolute;
+    margin: 20px;
+    cursor: pointer;
+}
+
+h5 {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    margin: 15px 0 20px 0;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+span {
+    font-weight: 400;
+    font-size: 18px;
+    color: #7b7b93;
+}
+
+.fci-radio:hover {
+    transform: scale(1.05);
+}
+
+.fci-radio:checked {
+    border: 3px solid #478bfb;
+}
+
+.fci-radio:checked:after {
+    background-color: #478bfb;
+}
