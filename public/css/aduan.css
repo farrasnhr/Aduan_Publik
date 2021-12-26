@@ -11,3 +11,300 @@ body {
 .navbar-brand img {
     max-width: 4.375rem;
 }
+
+.aduan-form {
+    height: fit-content;
+    width: 600px;
+    padding: 0.75rem 1rem;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.form-klarifikasi-laporan .form-check {
+    margin: 0;
+}
+
+.card-check {
+    height: 150px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-check .form-check-input {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: white;
+    border-color: #E0E9FE;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    margin: 0;
+    position: absolute;
+    box-shadow: none;
+    transition: border .075s ease-in-out;
+    cursor: pointer;
+    outline: none;
+}
+
+.card-check .form-check-label {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-check .form-check-input:hover {
+    border: 1px solid #121C51;
+    box-shadow: 0 0 0 1px #121C51;
+    -webkit-box-shadow: 0 0 0 1px #121C51;
+    -moz-box-shadow: 0 0 0 1px #121C51;
+}
+
+.card-check .form-check-input:checked {
+    border: 1px solid #121C51;
+    box-shadow: 0 0 0 1px #121C51;
+    -webkit-box-shadow: 0 0 0 1px #121C51;
+    -moz-box-shadow: 0 0 0 1px #121C51;
+    background: #121C51;
+}
+
+.card-check .form-check-input:checked+.form-check-label {
+    color: #ffffff;
+}
+
+.card-check .form-check-input:checked::after {
+    background-color: #478bfb;
+}
+
+@media only screen and (max-width: 600px) {
+    .aduan-form {
+        margin-bottom: 5rem;
+    }
+}
+
+.form-label {
+    font-weight: 500;
+    margin: 20px 0 0;
+    color: #2e457a;
+}
+
+.form-check-label {
+    font-weight: 500;
+    color: #2e457a;
+}
+
+.form-control {
+    border-color: #E0E9FE;
+    color: #121C51;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    color: #121C51;
+}
+
+.form-control::placeholder {
+    color: #121d51a1;
+}
+
+.form-select {
+    border-color: #121C51;
+}
+
+.form-select:focus {
+    border-color: #121C51;
+    box-shadow: none;
+}
+
+.form-select::placeholder {
+    color: #121d51a1;
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+    border-color: #E0E9FE;
+    background-image: url(../img/success.svg);
+}
+
+.form-control.is-valid:focus,
+.was-validated .form-control:valid:focus {
+    border-color: #121C51;
+    box-shadow: 0 0 0 1px #121C51;
+    -webkit-box-shadow: 0 0 0 1px #121C51;
+    -moz-box-shadow: 0 0 0 1px #121C51;
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+    border-color: #E0E9FE;
+    background-image: url(../img/important.svg);
+}
+
+.form-control.is-invalid:focus,
+.was-validated .form-control:invalid:focus {
+    border-color: #121C51;
+    box-shadow: 0 0 0 1px #121C51;
+    -webkit-box-shadow: 0 0 0 1px #121C51;
+    -moz-box-shadow: 0 0 0 1px #121C51;
+}
+
+.form-group textarea {
+    min-height: 200px;
+}
+
+.form-select.is-valid,
+.was-validated .form-select:valid {
+    border-color: #E0E9FE;
+}
+
+.form-select.is-valid:not([multiple]):not([size]),
+.form-select.is-valid:not([multiple])[size="1"],
+.was-validated .form-select:valid:not([multiple]):not([size]),
+.was-validated .form-select:valid:not([multiple])[size="1"] {
+    background-image: url(../img/success.svg);
+    background-position: right .75rem center,
+        center right 2.25rem;
+    background-size: 16px 12px,
+        calc(.75em + .375rem) calc(.75em + .375rem)
+}
+
+.form-select.is-valid:focus,
+.was-validated .form-select:valid:focus {
+    border-color: #121C51;
+    box-shadow: 0 0 0 1px #121C51;
+    -webkit-box-shadow: 0 0 0 1px #121C51;
+    -moz-box-shadow: 0 0 0 1px #121C51;
+}
+
+.form-select.is-invalid,
+.was-validated .form-select:invalid {
+    border-color: #E0E9FE;
+}
+
+.form-select.is-invalid:not([multiple]):not([size]),
+.form-select.is-invalid:not([multiple])[size="1"],
+.was-validated .form-select:invalid:not([multiple]):not([size]),
+.was-validated .form-select:invalid:not([multiple])[size="1"] {
+    background-image: url(../img/important.svg);
+    background-position: right .75rem center,
+        center right 2.25rem;
+    background-size: 16px 12px,
+        calc(.75em + .375rem) calc(.75em + .375rem)
+}
+
+.form-select.is-invalid:focus,
+.was-validated .form-select:invalid:focus {
+    border-color: #121C51;
+    box-shadow: 0 0 0 1px #121C51;
+    -webkit-box-shadow: 0 0 0 1px #121C51;
+    -moz-box-shadow: 0 0 0 1px #121C51;
+}
+
+.form-check-input {
+    border: 1px solid #00000040;
+}
+
+.form-check-input:focus {
+    border-color: #121C51;
+    outline: 0;
+    box-shadow: none;
+}
+
+.form-check-input:checked {
+    background-color: #121C51;
+    border-color: #121C51;
+}
+
+.form-check-input[type=checkbox]:indeterminate {
+    background-color: #121C51;
+    border-color: #121C51;
+}
+
+.form-check-input.is-valid,
+.was-validated .form-check-input:valid {
+    border-color: #121C51
+}
+
+.form-check-input.is-valid:checked,
+.was-validated .form-check-input:valid:checked {
+    background-color: #121C51
+}
+
+.form-check-input.is-valid:focus,
+.was-validated .form-check-input:valid:focus {
+    box-shadow: none
+}
+
+.form-check-input.is-valid~.form-check-label,
+.was-validated .form-check-input:valid~.form-check-label {
+    color: #2e457a;
+}
+
+.form-check-input.is-invalid,
+.was-validated .form-check-input:invalid {
+    border-color: #00000040
+}
+
+.form-check-input.is-invalid:checked,
+.was-validated .form-check-input:invalid:checked {
+    background-color: #121C51
+}
+
+.form-check-input.is-invalid:focus,
+.was-validated .form-check-input:invalid:focus {
+    border-color: #121C51;
+    outline: 0;
+    box-shadow: none;
+}
+
+.form-check-input.is-invalid~.form-check-label,
+.was-validated .form-check-input:invalid~.form-check-label {
+    color: #2e457a
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #121C51;
+    border-color: #121C51
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #2f3a74;
+    border-color: #2f3a74
+}
+
+.btn-check:focus+.btn-primary,
+.btn-primary:focus {
+    color: #fff;
+    background-color: #2f3a74;
+    border-color: #2f3a74;
+    box-shadow: 0 0 0 1px #121C51;
+    -webkit-box-shadow: 0 0 0 1px #121C51;
+    -moz-box-shadow: 0 0 0 1px #121C51;
+}
+
+.btn-check:active+.btn-primary,
+.btn-check:checked+.btn-primary,
+.btn-primary.active,
+.btn-primary:active,
+.show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #121C51;
+    border-color: #121C51
+}
+
+.btn-check:active+.btn-primary:focus,
+.btn-check:checked+.btn-primary:focus,
+.btn-primary.active:focus,
+.btn-primary:active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 1px #121C51;
+    -webkit-box-shadow: 0 0 0 1px #121C51;
+    -moz-box-shadow: 0 0 0 1px #121C51;
+}

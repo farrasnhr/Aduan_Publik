@@ -1,107 +1,81 @@
-<div class="h-100 mt-5 mb-5 pt-5 pb-5 d-flex justify-content-center align-items-center">
-    <div class="card login-form">
-        <div class="card-body">
-            <h2 class="card-title fw-bold text-center mb-4">DAFTAR</h2>
-            <h6 class="card-subtitle text-muted mb-4 fw-bold text-center">
-                daftar terlebih dahulu jika ingin menggunakan situs ini!
-            </h6>
+<div class="signup-form p-5">
+    <h1 class="card-title fw-bold text-center mb-4">Sign Up</h1>
+    <p class="text-center text-center">
+        Daftar untuk <span class="fw-bold">menggunakan layanan</span> Aduan
+    </p>
 
-            <!-- Masuk dengan Gmail -->
-            <div class="d-grid mt-3">
-                <a href="#" class="btn btn-info text-white btn-gmail"><img src="google.png" class="img-google me-2" alt="Gmail">Masuk dengan Gmail</a>
+    <form action="" method="post">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="input-nik mb-3">
+                    <label for="nik" class="form-label">NIK</label>
+                    <input type="text" class="form-control" id="nik" placeholder="Masukkan NIK" required>
+                </div>
+                <div class="input-namalengkap mb-3">
+                    <label for="namalengkap" class="form-label">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="namalengkap" placeholder="Masukkan Nama Lengkap">
+                </div>
+                <div class="input-gender mb-3">
+                    <label for="instansi-tujuan" class="form-label">Jenis Kelamin</label>
+                    <select class="form-select" id="instansi-tujuan" required>
+                        <option selected disabled value="">Pilih jenis kelamin</option>
+                        <option value="male">Laki-laki</option>
+                        <option value="female">Perempuan</option>
+                        <option value="others">Lainnya</option>
+                    </select>
+                </div>
+                <div class="input-pekerjaan mb-3">
+                    <label for="pekerjaan" class="form-label">Pekerjaan</label>
+                    <input type="text" class="form-control" id="pekerjaan" placeholder="Pekerjaan (opsional)">
+                </div>
             </div>
-
-            <!-- Masuk dengan Facebook -->
-            <div class="d-grid mt-3">
-                <a href="#" class="btn btn-info text-white btn-facebook"><img src="facebook.png" class="img-facebook me-2" alt="Facebook">Masuk dengan Facebook</a>
+            <div class="col-lg-6">
+                <div class="input-tanggallahir mb-3">
+                    <label for="tanggallahir" class="form-label">Tanggal Lahir</label>
+                    <input type="date" class="form-control" id="tanggallahir" placeholder="Masukkan Tanggal Lahir">
+                </div>
+                <div class="input-phonenumber mb-3">
+                    <label for="phonenumber" class="form-label">No. Telp Aktif</label>
+                    <input type="tel" class="form-control" id="phonenumber" placeholder="Masukkan No. Telp Aktif">
+                </div>
+                <div class="input-alamat mb-3">
+                    <label for="alamat" class="form-label">Tempat Tinggal</label>
+                    <input type="text" class="form-control" id="alamat" placeholder="Masukkan Tempat Tinggal">
+                </div>
+                <div class="input-kebutuhankhusus mb-3">
+                    <label for="kebutuhankhusus" class="form-label">Penyandang Disabilitas</label>
+                    <select class="form-select" id="kebutuhankhusus" required>
+                        <option selected disabled value="">Pilih status</option>
+                        <option value="1">Ya</option>
+                        <option value="2">Tidak</option>
+                    </select>
+                </div>
             </div>
-
-            <!-- Masuk dengan Twitter -->
-            <div class="d-grid mt-3 mb-4">
-                <a href="#" class="btn btn-info text-white btn-facebook"><img src="twitter.png" class="img-twitter me-2" alt="Twitter">Masuk dengan Twitter</a>
+            <div class="input-username mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Masukkan username" required>
             </div>
-
-            <!-- form daftar-->
-            <form>
-                <div class="row g-3">
-                    <div class="mb-3 col-md-6">
-                        <label for="exampleInputEmail1" class="form-label">NIK</label>
-                        <input type="NIK" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="KTP">
-                    </div>
-                    <div class="mb-3 col-md-6">
-                        <label for="exampleInputPassword1" class="form-label">Tempat Tinggal</label>
-                        <input type="tempat" class="form-control" id="exampleInputPassword1" placeholder="Tempat Tinggal Saat ini">
-                    </div>
-                </div>
-
-                <div class="row g-3">
-                    <div class="mb-3 col-md-6">
-                        <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
-                        <select type="jenis" class="form-select" id="floatingSelect">
-                            <option selected>Pilih Jenis Kelamin Anda</option>
-                            <option value="1">Laki-Laki</option>
-                            <option value="2">Perempuan</option>
-                        </select>
-                    </div>
-                    <div class="mb-3 col-md-6">
-                        <label for="exampleInputPassword1" class="form-label">Pekerjaan</label>
-                        <input type="pekerjaan" class="form-control" id="exampleInputPassword1" placeholder="Ketik Pekerjaan anda">
-                    </div>
-                </div>
-
-                <div class="row g-3">
-                    <div class="mb-3 col-md-6">
-                        <label for="exampleInputEmail1" class="form-label">Username</label>
-                        <input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
-                    </div>
-                    <div class="mb-3 col-md-6">
-                        <label for="exampleInputPassword1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleInputPassword1" placeholder="haidar@gmail.com">
-                    </div>
-                </div>
-
-                <div class="row g-3">
-                    <div class="mb-3 col-md-6">
-                        <label for="exampleInputEmail1" class="form-label">Nama Lengkap</label>
-                        <input type="nama" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Lengkap">
-                    </div>
-                    <div class="mb-3 col-md-6">
-                        <label for="exampleInputPassword1" class="form-label">Tanggal Lahir</label>
-                        <input type="tanggal" class="form-control" id="exampleInputPassword1" placeholder="07/31/2000">
-                    </div>
-                </div>
-
-                <div class="row g-3">
-                    <div class="mb-3 col-md-6">
-                        <label for="exampleInputEmail1" class="form-label">No. Telp Aktif</label>
-                        <input type="no" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Minimal 8-14 Angka">
-                    </div>
-                    <div class="mb-3 col-md-6">
-                        <label for="exampleInputPassword1" class="form-label">Penyandang Disabilitas</label>
-                        <select type="penyandang" class="form-select" id="floatingSelect">
-                            <option selected>Pilih Status</option>
-                            <option value="1">Ya</option>
-                            <option value="2">Tidak</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="row g-3">
-                    <div class="mb-3 col-md-6">
-                        <label for="exampleInputEmail1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Minimal 8 Karakter">
-                    </div>
-                    <div class="mb-3 col-md-6">
-                        <label for="exampleInputPassword1" class="form-label">Password Confirm</label>
-                        <input type="confirm" class="form-control" id="exampleInputPassword1" placeholder="Minimal 8 Karakter">
-                    </div>
-                </div>
-            </form>
-
-            <!-- Button Daftar -->
-            <div class="d-grid mt-3">
-                <a href="#" class="btn btn-info text-white btn-daftar">DAFTAR</a>
+            <div class="input-email mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="example@mail.com" required>
+            </div>
+            <div class="input-password mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Masukkan Password" required>
+            </div>
+            <div class="input-confirmpassword mb-3">
+                <label for="confirmpassword" class="form-label">Konfirmasi Password</label>
+                <input type="password" class="form-control" id="confirmpassword" placeholder="Masukkan Password" required>
             </div>
         </div>
-    </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="termcondition" required>
+            <label class="form-check-label" for="termcondition">Saya menyetujui Ketentuan
+                Layanan
+                dan Kebijakan Privasi</label>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">SIGN UP</button>
+    </form>
+    <hr>
+    <p class="text-center">Anda sudah memiliki akun? <a href="<?= BASEURL; ?>signin">Masuk</a></p>
 </div>

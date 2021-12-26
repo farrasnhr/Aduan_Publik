@@ -4,58 +4,107 @@
     font-family: 'Poppins', sans-serif;
 }
 
-main {
-    height: 100vh;
-    overflow-y: scroll;
-}
-
-.login-form {
+.signin-form {
     height: fit-content;
-    width: 430px;
+    width: 600px;
     padding: 0.75rem 1rem;
     background-color: white;
     border: none;
-
+    color: #121C51;
+    border-radius: 10px;
 }
 
-input[type="email"],
-input[type="password"] {
-    border-radius: 20px;
-    border: 2px solid rgb(228, 224, 224);
+.form-label {
+    font-weight: 600;
+    margin: 20px 0 0;
+    color: #2e457a;
 }
 
-.btn-masuk {
-    height: 35px;
-    border-radius: 20px;
-    font-weight: 700;
+.form-check-label {
+    font-weight: 600;
+    color: #2e457a;
+}
+
+.form-control {
+    border-color: #E0E9FE;
+    color: #121C51;
+}
+
+.form-control:focus {
+    border-color: #121C51;
+    box-shadow: 0 0 0 1px #121C51;
+    -webkit-box-shadow: 0 0 0 1px #121C51;
+    -moz-box-shadow: 0 0 0 1px #121C51;
+}
+
+.form-control::placeholder {
+    color: #121d51a1;
+}
+
+.btn-primary {
+    color: #fff;
     background-color: #121C51;
+    border-color: #121C51
 }
 
-.btn-gmail {
-    height: 35px;
+.btn-primary:hover {
+    color: #fff;
+    background-color: #2f3a74;
+    border-color: #2f3a74
+}
+
+.btn-check:focus+.btn-primary,
+.btn-primary:focus {
+    color: #fff;
+    background-color: #2f3a74;
+    border-color: #2f3a74;
+    box-shadow: 0 0 0 1px #121C51;
+    -webkit-box-shadow: 0 0 0 1px #121C51;
+    -moz-box-shadow: 0 0 0 1px #121C51;
+}
+
+.btn-check:active+.btn-primary,
+.btn-check:checked+.btn-primary,
+.btn-primary.active,
+.btn-primary:active,
+.show>.btn-primary.dropdown-toggle {
+    color: #fff;
     background-color: #121C51;
-    border-radius: 20px;
-    font-weight: 700;
+    border-color: #121C51
 }
 
-.btn-facebook {
-    height: 35px;
+.btn-check:active+.btn-primary:focus,
+.btn-check:checked+.btn-primary:focus,
+.btn-primary.active:focus,
+.btn-primary:active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 1px #121C51;
+    -webkit-box-shadow: 0 0 0 1px #121C51;
+    -moz-box-shadow: 0 0 0 1px #121C51;
+}
+
+.form-check-input {
+    border: 1px solid #00000040;
+}
+
+.form-check-input:focus {
+    border-color: #121C51;
+    outline: 0;
+    box-shadow: none;
+}
+
+.form-check-input:checked {
     background-color: #121C51;
-    border-radius: 20px;
-    font-weight: 700;
+    border-color: #121C51;
 }
 
-.img-google {
-    height: 20px;
-    width: 20px;
+.form-check-input[type=checkbox]:indeterminate {
+    background-color: #121C51;
+    border-color: #121C51;
 }
 
-.img-facebook {
-    height: 20px;
-    width: 20px;
-}
-
-.img-twitter {
-    height: 20px;
-    width: 20px;
+@media only screen and (max-width: 600px) {
+    .signin-form {
+        margin-bottom: 5rem;
+    }
 }
