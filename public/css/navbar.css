@@ -1,3 +1,13 @@
+::-moz-selection {
+    /* color: red; */
+    background: #FF71A4;
+}
+
+::selection {
+    /* color: red; */
+    background: #FF71A4;
+}
+
 body {
     color: black;
     background-color: #E0E9FE;
@@ -13,6 +23,7 @@ main {
 .navbar {
     position: fixed;
     background-color: #fff;
+    z-index: 999;
 }
 
 .navbar-nav {
@@ -115,6 +126,12 @@ main {
 
     main {
         margin: 0;
+    }
+}
+
+@media only screen and (max-height: 400px) {
+    .navbar {
+        overflow-y: scroll;
     }
 }
 

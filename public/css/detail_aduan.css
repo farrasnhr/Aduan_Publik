@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #2e457a;
+}
+
+.detail-aduan-form {
+    height: fit-content;
+    width: 600px;
+    padding: 0.75rem 1rem;
+    background-color: white;
+    border: none;
+    color: #121C51;
+    border-radius: 10px;
+}
+
+.detail-aduan-form .label-group {
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+    .detail-aduan-form {
+        margin-bottom: 5rem;
+    }
+}
