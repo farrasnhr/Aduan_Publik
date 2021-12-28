@@ -9,7 +9,7 @@
             <div class="col-lg-6">
                 <div class="input-nik mb-3">
                     <label for="nik" class="form-label">NIK</label>
-                    <input type="text" class="form-control" id="nik" placeholder="Masukkan NIK" required>
+                    <input type="number" class="form-control" id="nik" placeholder="Masukkan NIK" required>
                 </div>
                 <div class="input-namalengkap mb-3">
                     <label for="namalengkap" class="form-label">Nama Lengkap</label>
