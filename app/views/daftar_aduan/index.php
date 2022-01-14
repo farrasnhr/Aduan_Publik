@@ -6,17 +6,19 @@
                 Kategori Laporan
                 <span class="badge rounded-pill bg-success">Success</span>
             </div>
-            <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                    <span class="id-aduan">#123456</span>
-                    <h2>Judul Laporan</h2>
-                    <p>Isi laporan</p>
-                    <footer class="blockquote-footer">
-                        <span>Anonim</span>
-                        <span>11 Desember 2021</span>
-                    </footer>
-                </blockquote>
-            </div>
+            <?php foreach ($data['aduan'] as $aduan ) : ?>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <span class="id-aduan">#<?= $aduan['id']; ?></span>
+                        <h2>Judul Laporan</h2>
+                        <p>Isi laporan</p>
+                        <footer class="blockquote-footer">
+                            <span>Anonim</span>
+                            <span>11 Desember 2021</span>
+                        </footer>
+                    </blockquote>
+                </div>              
+            <?php endforeach; ?>
         </div>
     </a>
 </div>
