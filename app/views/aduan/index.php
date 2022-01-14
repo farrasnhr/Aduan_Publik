@@ -89,10 +89,10 @@
                 <option value="">...</option>
             </select>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label class="form-label" for="form-file">Lampiran (Opsional)</label>
             <input class="form-control" type="file" id="form-file">
-        </div>
+        </div> -->
         <div class="form-check was-validated mt-3">
             <input type="checkbox" class="form-check-input" id="persetujuan-layanan-privasi" required>
             <label class="form-check-label" for="persetujuan-layanan-privasi">Saya menyetujui Ketentuan
