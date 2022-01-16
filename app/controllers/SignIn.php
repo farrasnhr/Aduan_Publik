@@ -1,6 +1,8 @@
 <?php
-class SignIn extends Controller {
-    public function index() {
+class SignIn extends Controller
+{
+    public function index()
+    {
         $data['judul'] = "Sign In";
         $data['css'] = "sign_in";
         $this->view('templates/header', $data);

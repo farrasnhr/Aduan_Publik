@@ -1,5 +1,4 @@
 <?php
-
 class DaftarAduan extends Controller
 {
     public function index()
@@ -12,13 +11,17 @@ class DaftarAduan extends Controller
         $this->view('templates/footer');
     }
 
-    public function detail($id)
+    public function detail($id = 0)
     {
         $data['judul'] = "Detail Mahasiswa";
         $data['css'] = "detail_aduan";
-        $data['aduan'] = $this->model('DaftarAduan_model')->getAduanById($id);
-        $this->view('templates/header', $data);
-        $this->view('daftar_aduan/detail', $data);
-        $this->view('templates/footer');
+        if ($id != 0) {
+            $data['aduan'] = $this->model('DaftarAduan_model')->getAduanById($id);
+            $this->view('templates/header', $data);
+            $this->view('daftar_aduan/detail', $data);
+            $this->view('templates/footer');
+        } else {
+            header('location: 0');
+        }
     }
 }

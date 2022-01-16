@@ -18,17 +18,17 @@
     </p>
     <p>Terima kasih</p>
     <div class="row align-items-start data-stats my-5">
-        <div class="col-sm-4 text-center">
-            <h3 class="label fw-bold">Laporan masuk</h3>
-            <div class="data-label">10</div>
+        <div class="col-md-4 text-center">
+            <h3 class="label fw-bold">Total Aduan</h3>
+            <div class="data-label"><?= $data['aduan'][0]['total']; ?></div>
         </div>
-        <div class="col-sm-4 text-center">
-            <h3 class="label fw-bold">Lorem</h3>
-            <div class="data-label">10</div>
+        <div class="col-md-4 text-center">
+            <h3 class="label fw-bold">Aduan Terkurasi</h3>
+            <div class="data-label"><?= $data['aduan'][0]['terjawab']; ?></div>
         </div>
-        <div class="col-sm-4 text-center">
-            <h3 class="label fw-bold">Lorem</h3>
-            <div class="data-label">10</div>
+        <div class="col-md-4 text-center">
+            <h3 class="label fw-bold">Jumlah Pengguna</h3>
+            <div class="data-label"><?= $data['aduan'][0]['total_user']; ?></div>
         </div>
     </div>
 </div>

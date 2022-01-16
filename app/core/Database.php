@@ -36,7 +36,6 @@ class Database
                 case is_int($value):
                     $type = PDO::PARAM_INT;
                     break;
-
                 case is_bool($value):
                     $type = PDO::PARAM_BOOL;
                     break;
