@@ -69,7 +69,7 @@ if (!isset($_SESSION["username"])) {
             </li>
 
             <li class="nav-item">
-                <a href="<?= BASEURL; ?>profil" class="nav-link">
+                <a href="<?= BASEURL; ?>auth" class="nav-link">
                     <?php
                     if ($active) {
                         echo '<svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="space-shuttle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-space-shuttle fa-w-20 fa-5x">

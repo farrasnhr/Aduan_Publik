@@ -1,12 +1,12 @@
 <div class="aduan-form p-5">
-    <h1 class="text-center fw-bold"> Sampaikan Laporan Anda </h1>
+    <h1 class="text-center fw-bold"> Sampaikan Laporan Anda </h1>    
     <form action="" method="POST">
         <div class="form-klasifikasi-laporan">
             <span class="form-label"> Pilih klasifikasi laporan</>
                 <div class="row py-0 pe-4">
                     <?php foreach ($data['klasifikasi'] as $klasifikasi) : ?>
                         <div class="col-md-4 my-1 p-1">
-                            <div class="card-check form-check text-center">
+                            <div class="card-check form-check text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="<?= $klasifikasi['deskripsi']; ?>">
                                 <input class="form-check-input fci-radio" type="radio" name="klasifikasi-laporan" id="<?= 'form-', strtolower(preg_replace('/\s+/', '-', $klasifikasi['klasifikasi'])); ?>" required>
                                 <label class="form-check-label" for="<?= 'form-', strtolower(preg_replace('/\s+/', '-', $klasifikasi['klasifikasi'])); ?>">
                                     <?= file_get_contents(BASEURL . $klasifikasi['icon']); ?>

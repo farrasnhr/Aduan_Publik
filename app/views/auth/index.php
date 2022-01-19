@@ -7,11 +7,11 @@
     <form action="" method="post">
         <div class="input-email mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="example@mail.com" required>
+            <input type="email" class="form-control" name="email" id="email" placeholder="example@mail.com" required>
         </div>
         <div class="input-password mb-3">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="password" required>
+            <input type="password" class="form-control" name="password" id="password" placeholder="password" required>
         </div>
         <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="ingat-saya">
@@ -20,5 +20,5 @@
         <button type="submit" class="btn btn-primary w-100">SIGN IN</button>
     </form>
     <hr>
-    <p class="text-center">Anda belum memiliki akun? <a href="<?= BASEURL; ?>signup">Daftar Sekarang</a></p>
+    <p class="text-center">Anda belum memiliki akun? <a href="<?= BASEURL; ?>auth/signup">Daftar Sekarang</a></p>
 </div>
