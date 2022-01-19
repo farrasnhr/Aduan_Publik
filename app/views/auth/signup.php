@@ -17,7 +17,7 @@
                         <option selected disabled value="">Pilih jenis kelamin</option>
                         <option value="pria">Pria</option>
                         <option value="wanita">Wanita</option>
-                        <option value="others">Lainnya</option>
+                        <option value="lainnya">Lainnya</option>
                     </select>
                 </div>
                 <div class="input-tanggallahir mb-3">

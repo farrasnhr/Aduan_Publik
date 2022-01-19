@@ -1,5 +1,4 @@
 <?php
-session_start();
 $active = true;
 
 if (!isset($_SESSION["username"])) {

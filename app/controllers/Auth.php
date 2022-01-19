@@ -31,4 +31,8 @@ class Auth extends Controller
         }
         // var_dump($_POST);
     }
+    public function login()
+    {
+        # code...
+    }
 }
