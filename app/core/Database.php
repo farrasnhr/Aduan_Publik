@@ -36,7 +36,6 @@ class Database
                 case is_int($value):
                     $type = PDO::PARAM_INT;
                     break;
-
                 case is_bool($value):
                     $type = PDO::PARAM_BOOL;
                     break;
@@ -65,5 +64,10 @@ class Database
     {
         $this->execute();
         return $this->stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function rowCount()
+    {
+        return $this->stmt->rowCount();
     }
 }

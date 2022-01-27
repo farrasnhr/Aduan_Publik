@@ -3,6 +3,7 @@ define('BASEURL', 'http://localhost/Aduan_Publik/public/');
 define('baseCSS', '<link rel="stylesheet" href="');
 define('endCSS', '">');
 define('CSS', 'http://localhost/Aduan_Publik/public/css/');
+define('JS', 'http://localhost/Aduan_Publik/public/js/');
 
 // Database
 define('DB_HOST', 'localhost');

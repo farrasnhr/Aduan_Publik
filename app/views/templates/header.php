@@ -1,11 +1,3 @@
-<?php
-session_start();
-$active = true;
-
-if (!isset($_SESSION["username"])) {
-    $active = false;
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,9 +61,14 @@ if (!isset($_SESSION["username"])) {
             </li>
 
             <li class="nav-item">
-                <a href="<?= BASEURL; ?>profil" class="nav-link">
+                <a href="
+                <?php
+                if (isset($_SESSION['email'])) echo BASEURL . "profil";
+                else echo BASEURL . "auth";
+                ?>
+                " class="nav-link">
                     <?php
-                    if ($active) {
+                    if (isset($_SESSION['email'])) {
                         echo '<svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="space-shuttle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-space-shuttle fa-w-20 fa-5x">
                         <g class="fa-group">
                             <path fill="currentColor" d="M32 416c0 35.35 21.49 64 48 64h16V352H32zm154.54-232h280.13L376 168C243 140.59 222.45 51.22 128 34.65V160h18.34a45.62 45.62 0 0 1 40.2 24zM32 96v64h64V32H80c-26.51 0-48 28.65-48 64zm114.34 256H128v125.35C222.45 460.78 243 371.41 376 344l90.67-16H186.54a45.62 45.62 0 0 1-40.2 24z" class="fa-secondary"></path>
@@ -82,7 +79,7 @@ if (!isset($_SESSION["username"])) {
                         echo '<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" class="svg-inline--fa fa-user fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path></svg>';
                     }
                     ?>
-                    
+
                 </a>
             </li>
         </ul>
