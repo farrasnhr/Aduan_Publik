@@ -4,7 +4,9 @@
         Masuk untuk <span class="fw-bold">menggunakan layanan</span> Aduan
     </p>
 
-    <form action="" method="post">
+    <?php Flasher::flash(); ?>
+
+    <form action="<?= BASEURL; ?>auth/login" method="POST">
         <div class="input-email mb-3">
             <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control" name="email" id="email" placeholder="example@mail.com" required>
@@ -14,7 +16,7 @@
             <input type="password" class="form-control" name="password" id="password" placeholder="password" required>
         </div>
         <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="ingat-saya">
+            <input type="checkbox" class="form-check-input" name="ingat-saya" id="ingat-saya">
             <label class="form-check-label" for="ingat-saya">Ingat saya!</label>
         </div>
         <button type="submit" class="btn btn-primary w-100">SIGN IN</button>

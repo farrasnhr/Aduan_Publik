@@ -27,7 +27,7 @@
             <div class="data-label"><?= $data['aduan'][0]['terjawab']; ?></div>
         </div>
         <div class="col-md-4 text-center">
-            <h3 class="label fw-bold">Jumlah Pengguna</h3>
+            <h3 class="label fw-bold">Pengguna Aktif</h3>
             <div class="data-label"><?= $data['aduan'][0]['total_user']; ?></div>
         </div>
     </div>

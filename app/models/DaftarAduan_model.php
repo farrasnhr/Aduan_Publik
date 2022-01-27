@@ -9,6 +9,13 @@ class DaftarAduan_model
         $this->db = new Database;
     }
 
+    public function getListId($id)
+    {
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id_aduan=:id AND status_rahasia=0');
+        $this->db->bind('id', $id);
+        return $this->db->resultSet();
+    }
+
     public function getAllAduanPublik()
     {
         $this->db->query('SELECT klasifikasi_aduan.klasifikasi, aduan.status_aduan, aduan.id_aduan, aduan.judul, aduan.isi, aduan.status_anonim, users.nama, aduan.tanggal_aduan FROM ((' . $this->table .
@@ -33,8 +40,17 @@ class DaftarAduan_model
     {
         $this->db->query('SELECT COUNT(id_aduan) AS total, 
                             SUM(status_aduan = "Direspon") AS terjawab, 
-                            COUNT(users.id_user) AS total_user FROM ' . $this->table .
+                            COUNT(DISTINCT(users.id_user)) AS total_user FROM ' . $this->table .
             ' INNER JOIN users ON users.id_user = aduan.id_user');
+        return $this->db->resultSet();
+    }
+
+    public function getAduanByUser($id)
+    {
+        $this->db->query('SELECT klasifikasi_aduan.klasifikasi, aduan.status_aduan, aduan.id_aduan, aduan.judul, aduan.isi, aduan.status_anonim, users.nama, aduan.tanggal_aduan FROM ((' . $this->table .
+            ' INNER JOIN klasifikasi_aduan ON klasifikasi_aduan.id_klasifikasi = aduan.id_klasifikasi) 
+                            INNER JOIN users ON users.id_user = aduan.id_user) WHERE aduan.id_user=:id');
+        $this->db->bind('id', $id);
         return $this->db->resultSet();
     }
 }

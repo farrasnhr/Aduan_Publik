@@ -9,11 +9,18 @@ class User_model
         $this->db = new Database;
     }
 
-    public function getUser($id)
+    public function findUserByEmail($email)
     {
-        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id_user=:id');
-        $this->db->bind('id', $id);
-        return $this->db->resultSet();
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE email=:email');
+        $this->db->bind('email', $email);
+
+        $row = $this->db->single();
+
+        if ($this->db->rowCount() > 0) {
+            return $row;
+        } else {
+            return false;
+        }
     }
 
     public function registerUser($data)
@@ -34,8 +41,16 @@ class User_model
         return $this->db->rowCount();
     }
 
-    public function loginUser($data)
+    public function unlockHashPassword($email, $password)
     {
-        # code...
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE email=:email');
+        $this->db->bind('email', $email);
+
+        $row = $this->db->single();
+        if (password_verify($password, $row['password'])) {
+            return $row;
+        } else {
+            return false;
+        }
     }
 }

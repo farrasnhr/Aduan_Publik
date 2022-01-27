@@ -4,12 +4,14 @@
         Daftar untuk <span class="fw-bold">menggunakan layanan</span> Aduan
     </p>
 
+    <?php Flasher::flash(); ?>
+
     <form action="<?= BASEURL; ?>auth/regist" method="POST">
         <div class="row">
             <div class="col-lg-6">
                 <div class="input-nama mb-3">
                     <label for="nama" class="form-label">Nama Lengkap</label>
-                    <input type="text" name="nama" class="form-control" id="nama" placeholder="Masukkan Nama Lengkap" required>
+                    <input type="text" name="nama" class="form-control" id="nama" placeholder="Masukkan Nama Lengkap" value="<?php if (isset($_POST['nama'])) echo $_POST['nama']; ?>" required>
                 </div>
                 <div class="input-gender mb-3">
                     <label for="gender" class="form-label">Jenis Kelamin</label>
@@ -31,7 +33,7 @@
                     <input type="text" class="form-control" name="alamat" id="alamat" placeholder="Masukkan Alamat" required>
                 </div>
                 <div class="input-phonenumber mb-3">
-                    <label for="no_telp" class="form-label">No. Telp Aktif</label>
+                    <label for="no_telp" class="form-label">No. Telp Aktif (+628xxx)</label>
                     <input type="tel" class="form-control" name="no_telp" id="no_telp" placeholder="Masukkan No. Telp Aktif" required>
                 </div>
                 <div class="input-pekerjaan mb-3">
